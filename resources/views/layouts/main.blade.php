@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nozulu and Ngonyama Trading Enterprises</title>
+    <link rel="icon" type="image/jpeg" href="{{ asset('nozlogo.jpg') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         /* Sticky Navbar Styles */
@@ -29,6 +30,15 @@
             font-size: 1.5rem;
             font-weight: bold;
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .navbar-logo {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
         }
 
         .navbar-menu {
@@ -179,7 +189,10 @@
     <!-- Sticky Navbar -->
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="{{ route('home') }}" class="navbar-brand">Nozulu & Ngonyama</a>
+            <a href="{{ route('home') }}" class="navbar-brand">
+                <img src="{{ asset('nozlogo.jpg') }}" alt="Nozulu & Ngonyama Logo" class="navbar-logo">
+                <span>Nozulu & Ngonyama</span>
+            </a>
             
             <button class="mobile-menu-button" onclick="toggleMobileMenu()">
                 ☰
@@ -205,6 +218,9 @@
                             <a href="{{ route('gallery', 'construction') }}">Construction Works</a>
                         </li>
                     </ul>
+                </li>
+                <li class="navbar-item">
+                    <a href="{{ route('backend.login') }}" class="navbar-link">Admin Login</a>
                 </li>
             </ul>
         </div>

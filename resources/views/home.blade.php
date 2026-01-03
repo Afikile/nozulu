@@ -1,9 +1,47 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="hero">
-    <h1>Nozulu and Ngonyama Trading Enterprises</h1>
-    <p>Specialists in Building and Electrical Construction</p>
+<!-- Jumbotron Hero Section with Background Image -->
+<div style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&h=800&fit=crop'); background-size: cover; background-position: center; padding: 6rem 2rem; text-align: center; position: relative; overflow: hidden;">
+    <!-- Dark Overlay with Gradient -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(30, 58, 138, 0.92) 0%, rgba(37, 99, 235, 0.88) 50%, rgba(220, 38, 38, 0.92) 100%);"></div>
+    
+    <!-- Animated Pattern Overlay -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.1; background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px); pointer-events: none;"></div>
+    
+    <div class="container" style="position: relative; z-index: 1;">
+        <h1 style="font-size: 3.5rem; font-weight: 800; color: white; margin-bottom: 1.5rem; text-shadow: 3px 3px 6px rgba(0,0,0,0.5); line-height: 1.2;">
+            Nozulu and Ngonyama Trading Enterprises
+        </h1>
+        <p style="font-size: 1.8rem; color: white; margin-bottom: 2.5rem; font-weight: 500; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+            Specialists in Building and Electrical Construction
+        </p>
+        
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="{{ route('gallery') }}" style="background: white; color: #1e3a8a; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: all 0.3s; display: inline-block;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.3)'">
+                View Our Projects
+            </a>
+            <a href="{{ route('contact') }}" style="background: #dc2626; color: white; padding: 1rem 2.5rem; border-radius: 50px; font-weight: 700; font-size: 1.1rem; text-decoration: none; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: all 0.3s; display: inline-block;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 12px rgba(0,0,0,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.3)'">
+                Get in Touch
+            </a>
+        </div>
+        
+        <!-- Stats Section -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; margin-top: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <div style="background: rgba(255,255,255,0.25); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
+                <div style="font-size: 2.5rem; font-weight: 800; color: white; margin-bottom: 0.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">15+</div>
+                <div style="color: white; font-weight: 600; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Years Experience</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.25); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
+                <div style="font-size: 2.5rem; font-weight: 800; color: white; margin-bottom: 0.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">100+</div>
+                <div style="color: white; font-weight: 600; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Projects Completed</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.25); padding: 1.5rem; border-radius: 12px; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
+                <div style="font-size: 2.5rem; font-weight: 800; color: white; margin-bottom: 0.5rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">100%</div>
+                <div style="color: white; font-weight: 600; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Client Satisfaction</div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="container">
